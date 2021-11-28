@@ -28,12 +28,12 @@ class ModelTests(TestCase):
         with self.assertRaises(ValueError):
             get_user_model().objects.create_user(None, 'pass123')
 
-    def test_create_new_supperuser(self):
-        """Test creating a new supperuser"""
-        user = get_user_model().objects.create_supperuser(
+    def test_create_new_superuser(self):
+        """Test creating a new superuser"""
+        user = get_user_model().objects.create_superuser(
             'test@gmail.com',
             'pass123'
         )
 
-        self.assertTrue(user.is_supperuser)
+        self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
