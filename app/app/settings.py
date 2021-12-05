@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'core', #Add this to fix when import core
     'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
